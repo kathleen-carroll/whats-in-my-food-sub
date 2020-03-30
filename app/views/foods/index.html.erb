@@ -1,0 +1,13 @@
+<h1>Results</h1>
+
+<h3>Number of Results: <%= @count %></h3>
+<h3>Top 10: </h3>
+
+<% @foods[0..9].each do |food| %>
+  <ul>
+    <li><%= food[:fdcId] %></li>
+    <%= food[:description] %>
+    <%= food[:brandOwner] %>
+    <%= food[:ingredients] %>
+  </ul>
+<% end %>
